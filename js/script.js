@@ -47,14 +47,14 @@ var quotes = [
 
 
 function getRandomQuote(quotes) {
-  return Math.floor((Math.random() * 6) + 1);
-  console.log()
+  var randomNumber = Math.floor((Math.random() * 6) + 1);
+  alert(randomNumber);
 }
 
 
 /***
-  Create the `getRandomQuote` function to:
-   - generate a random number 
+  Create the `getRandomQuote` function to: "done"
+   - generate a random number "done"
    - use the random number to `return` a random quote object from the 
      `quotes` array.
 ***/
