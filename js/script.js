@@ -10,14 +10,10 @@ var quotes = [
   {
     quote: "Help young people, Help small guys. Becayse small guys will be big. Young people will have the seeds you bury in their minds, and when they grow up, the will change the world.",
     source: "Jack Ma",
-    year: "",
-    citation: "" 
   },
     {
     quote: "If you don't give up, you still have a chance. Giving up is the greatest failure",
     source: "Jack Ma",
-    year: "",
-    citation: "" 
   },
     {
     quote: "Stay Hungry.Stay Foolish",
