@@ -38,21 +38,13 @@ var quotes = [
     citation: "University of Nairobi" 
   },
     {
-    quote: "",
+    quote: "Most people don't do what they really want to do. They do what someone else wants them to do.",
     source: "Dan Lok",
     year: "2009",
     citation: "F.U. Money" 
   },
 ];
-/*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
 
-  Recommended: 
-    - Add at least one `year` and/or `citation` property to at least one 
-      quote object.
-***/
 
 function getRandomQuote(quotes) {
   return Math.floor((Math.random() * 6) + 1);
