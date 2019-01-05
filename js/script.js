@@ -6,6 +6,44 @@ FSJS project 1 - A Random Quote Generator
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
 
+var quotes = [
+  {
+    quote: "",
+    source: "",
+    year: "",
+    citation: "" 
+  },
+    {
+    quote: "",
+    source: "",
+    year: "",
+    citation: "" 
+  },
+    {
+    quote: "",
+    source: "",
+    year: "",
+    citation: "" 
+  },
+    {
+    quote: "",
+    source: "",
+    year: "",
+    citation: "" 
+  },
+    {
+    quote: "",
+    source: "",
+    year: "",
+    citation: "" 
+  },
+    {
+    quote: "",
+    source: "",
+    year: "",
+    citation: "" 
+  },
+];
 /*** 
   Create the array of quote objects and name it `quotes`.
   Add at least five quote objects to the `quotes` array.
