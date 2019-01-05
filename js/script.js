@@ -8,40 +8,40 @@ FSJS project 1 - A Random Quote Generator
 
 var quotes = [
   {
-    quote: "",
-    source: "",
+    quote: "Help young people, Help small guys. Becayse small guys will be big. Young people will have the seeds you bury in their minds, and when they grow up, the will change the world.",
+    source: "Jack Ma",
     year: "",
     citation: "" 
   },
     {
-    quote: "",
-    source: "",
+    quote: "If you don't give up, you still have a chance. Giving up is the greatest failure",
+    source: "Jack Ma",
     year: "",
     citation: "" 
   },
     {
-    quote: "",
-    source: "",
-    year: "",
-    citation: "" 
+    quote: "Stay Hungry.Stay Foolish",
+    source: "Steve Jobs",
+    year: "2005",
+    citation: "Stanford Commencement Speech" 
+  },
+    {
+    quote: "You've got to find what you love",
+    source: "Steve Jobs",
+    year: "2005",
+    citation: "Stanford Commencement Speech" 
+  },
+    {
+    quote: "Some of the most successful innovators in the world quit university to pursue their innovative dreams on their own after being frustrated by the academic institutions,",
+    source: "Jack Ma",
+    year: "2017",
+    citation: "University of Nairobi" 
   },
     {
     quote: "",
-    source: "",
-    year: "",
-    citation: "" 
-  },
-    {
-    quote: "",
-    source: "",
-    year: "",
-    citation: "" 
-  },
-    {
-    quote: "",
-    source: "",
-    year: "",
-    citation: "" 
+    source: "Dan Lok",
+    year: "2009",
+    citation: "F.U. Money" 
   },
 ];
 /*** 
@@ -54,7 +54,10 @@ var quotes = [
       quote object.
 ***/
 
-
+function getRandomQuote(quotes) {
+  return Math.floor((Math.random() * 6) + 1);
+  console.log()
+}
 
 
 /***
