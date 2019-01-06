@@ -10,10 +10,14 @@ var quotes = [
   {
     quote: "Help young people, Help small guys. Becayse small guys will be big. Young people will have the seeds you bury in their minds, and when they grow up, the will change the world.",
     source: "Jack Ma",
+    year: "",
+    citation: "",
   },
     {
     quote: "If you don't give up, you still have a chance. Giving up is the greatest failure",
     source: "Jack Ma",
+    year: "",
+    citation: "",
   },
     {
     quote: "Stay Hungry.Stay Foolish",
@@ -43,19 +47,18 @@ var quotes = [
 
 
 function getRandomQuote() {
-  var quoteIndex = Math.floor(Math.random() * quotes.length;
-  for (var i = 0; i < array.length; i++)  {
-    var randomQuote = array[quoteIndex]; 
-  }
-  return randomQuote;
+  var quoteIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[quoteIndex];
 }
 
 function printQuote(message) {
-  var result = getRandomQuote();
-  var message = "<p class='quote'>" + result.quote + "</p>" + "<p class='source'>" + result.source "</p>" + "<p class='year'>" + result.year "</p>" + "<p class='citation'>" + result.citation "</p>";
-}
+  var result = getRandomQuote(quotes);
+  var message = "<p class='quote'>" + result.quote + "</p>" + 
+                "<p class='source'>" + result.source + "</p>" + 
+                "<span class='citation'>" + result.citation + "</span>" +
+                "<span class='year'>" + result.year + "</span>";
+  document.getElementById('quote-box').innerHTML = message;
+};
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
