@@ -42,7 +42,7 @@ var quotes = [
 ];
 
 
-function getRandomQuote(array) {
+function getRandomQuote() {
   var quoteIndex = Math.floor(Math.random() * quotes.length;
   for (var i = 0; i < array.length; i++)  {
     var randomQuote = array[quoteIndex]; 
@@ -50,30 +50,10 @@ function getRandomQuote(array) {
   return randomQuote;
 }
 
-function printQuote() {
-  var readyQuote = document.getElementById('getRandomQuote'); 
+function printQuote(message) {
+  var result = getRandomQuote();
+  var message = "<p class='quote'>" + result.quote + "</p>" + "<p class='source'>" + result.source "</p>" + "<p class='year'>" + result.year "</p>" + "<p class='citation'>" + result.citation "</p>";
 }
-
-
-/***
-  Create the `printQuote` function to: 
-   - call the `getRandomQuote` function and assign it to a variable.
-   - use the properties of the quote object stored in the variable to 
-     create your HTML string.
-   - use conditionals to make sure the optional properties exist before 
-     they are added to the HTML string.
-   - set the `innerHTML` of the `quote-box` div to the HTML string. 
-***/
-
-
-
-
-/***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
-***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
