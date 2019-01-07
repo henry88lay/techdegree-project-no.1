@@ -5,7 +5,7 @@ FSJS project 1 - A Random Quote Generator
 
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
-
+// Var quotes contains the data for the quotes
 var quotes = [
   {
     quote: "No matter how smart you are, you will encounter mistakes,",
@@ -42,7 +42,7 @@ var quotes = [
     source: "Dan Lok",
     year: "2009",
     citation: "F.U. Money" 
-  },
+  }
 ];
 
 
