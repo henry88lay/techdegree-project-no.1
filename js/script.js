@@ -11,37 +11,43 @@ var quotes = [
     quote: "No matter how smart you are, you will encounter mistakes,",
     source: "Jack Ma",
     year: "2018",
-    citation: "World Economic Forum" 
+    citation: "World Economic Forum", 
+    theme: "personal development"
   },
     {
     quote: "If you want your company to be successful, if you want your company to operate with wisdom, with care, then women are the best.",
     source: "Jack Ma",
     year: "2018",
-    citation: "World Economic Forum" 
+    citation: "World Economic Forum", 
+    theme: "entrepreneurship"
   },
     {
     quote: "Stay Hungry.Stay Foolish",
     source: "Steve Jobs",
     year: "2005",
-    citation: "Stanford Commencement Speech" 
+    citation: "Stanford Commencement Speech", 
+    theme: "innovation"
   },
     {
     quote: "You've got to find what you love",
     source: "Steve Jobs",
     year: "2005",
-    citation: "Stanford Commencement Speech" 
+    citation: "Stanford Commencement Speech", 
+    theme: "personal development"
   },
     {
     quote: "Some of the most successful innovators in the world quit university to pursue their innovative dreams on their own after being frustrated by the academic institutions,",
     source: "Jack Ma",
     year: "2017",
-    citation: "University of Nairobi" 
+    citation: "University of Nairobi", 
+    theme: "entrepreneurship"
   },
     {
     quote: "Most people don't do what they really want to do. They do what someone else wants them to do.",
     source: "Dan Lok",
     year: "2009",
-    citation: "F.U. Money" 
+    citation: "F.U. Money", 
+    theme: "business"
   }
 ];
 
