@@ -8,16 +8,16 @@ FSJS project 1 - A Random Quote Generator
 
 var quotes = [
   {
-    quote: "Help young people, Help small guys. Becayse small guys will be big. Young people will have the seeds you bury in their minds, and when they grow up, the will change the world.",
+    quote: "No matter how smart you are, you will encounter mistakes,",
     source: "Jack Ma",
-    year: "",
-    citation: "",
+    year: "2018",
+    citation: "World Economic Forum" 
   },
     {
-    quote: "If you don't give up, you still have a chance. Giving up is the greatest failure",
+    quote: "If you want your company to be successful, if you want your company to operate with wisdom, with care, then women are the best.",
     source: "Jack Ma",
-    year: "",
-    citation: "",
+    year: "2018",
+    citation: "World Economic Forum" 
   },
     {
     quote: "Stay Hungry.Stay Foolish",
@@ -51,12 +51,12 @@ function getRandomQuote() {
   return quotes[quoteIndex];
 }
 
-function printQuote(message) {
-  var result = getRandomQuote(quotes);
+function printQuote() {
+  var result = getRandomQuote();
   var message = "<p class='quote'>" + result.quote + "</p>" + 
-                "<p class='source'>" + result.source + "</p>" + 
+                "<p class='source'>" + result.source + 
                 "<span class='citation'>" + result.citation + "</span>" +
-                "<span class='year'>" + result.year + "</span>";
+                "<span class='year'>" + result.year + "</span>" + "</p>" ;
   document.getElementById('quote-box').innerHTML = message;
 };
 
