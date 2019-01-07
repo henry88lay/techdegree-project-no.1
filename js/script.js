@@ -5,7 +5,7 @@ FSJS project 1 - A Random Quote Generator
 
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
-// Var quotes contains the data for the quotes
+// This array contains the data for the quotes including, source, year, and citation//
 var quotes = [
   {
     quote: "No matter how smart you are, you will encounter mistakes,",
@@ -45,12 +45,13 @@ var quotes = [
   }
 ];
 
-
+// This function generations a random quote within the quotes array up top.
 function getRandomQuote() {
   var quoteIndex = Math.floor(Math.random() * quotes.length);
   return quotes[quoteIndex];
 }
 
+// This function prints out the information on quotes to the HTML file//
 function printQuote() {
   var result = getRandomQuote();
   var message = "<p class='quote'>" + result.quote + "</p>" + 
