@@ -51,7 +51,7 @@ var quotes = [
   }
 ];
 
-// This function generations a random quote within the quotes array up top.
+// This function generations a random quote within the quotes array up top//
 function getRandomQuote() {
   var quoteIndex = Math.floor(Math.random() * quotes.length);
   return quotes[quoteIndex];
