@@ -19,7 +19,7 @@ let quotes = [
     tags: ["Business"],
     colors: {
       background: "#EE82EE",
-      color: "#0000FF"
+      color1: "#F0E68C"
     }
   },
     {
@@ -30,7 +30,7 @@ let quotes = [
     tags: ["innovation"],
     colors: {
       background: "#FA8072",
-      color: "#f08080"
+      color1: "#000"
     }
   },
     {
@@ -41,7 +41,7 @@ let quotes = [
     tags: ["personal development"],
       colors: {
       background: "#FFD700",
-      color: "#008000"
+      color1: "#008000"
     }
   },
     {
@@ -50,7 +50,7 @@ let quotes = [
     tags: ["Business"],
     colors: {
       background: "#FF69B4",
-      color: "#FFFF00"
+      color1: "#FFFF00"
     }
   },
     {
@@ -61,7 +61,7 @@ let quotes = [
     theme: ["business"],
     colors: {
       background: "#4169E1",
-      color: "#C0C0C0"
+      color: "#ffbf00"
     }
   }
 ];
@@ -71,22 +71,81 @@ const TIMEOUT_PERIOD = 15000;
 // this will change the quote every 15 seconds.
 var timer = setInterval(printQuote, TIMEOUT_PERIOD);
 
-// This function generations a random quote within the quotes array up top//
+// This function generations a random quote within the quotes array up top
 function getRandomQuote() {
-  let quoteIndex = Math.floor(Math.random() * quotes.length);
-    return quotes[quoteIndex];
+  let randomNumberNew;
+  do{
+    randomNumberNew = Math.floor(Math.random() * quotes.length); 
+  }while(randomNumberNew===randomNumber);
+  randomNumber = randomNumberNew; 
+  return quotes[randomNumber];
 }
 
-// This function prints out the information on quotes to the HTML file//
+// This function prints out the information on quotes to the HTML file
 function printQuote() {
-  clearInterval{timer};
+  clearInterval(timer);
   let result = getRandomQuote();
-  let message = "<p class='quote'>" + result.quote + "</p>" + 
-                "<p class='source'>" + result.source + 
-                "<span class='citation'>" + result.citation + "</span>" +
-                "<span class='year'>" + result.year + "</span>" + "</p>" ;
-  document.getElementById('quote-box').innerHTML = message;
-};
+
+  let message = `
+        ${getCategory(result)}
+        <p class="quote">“${result.quote}”</p>
+        <p class="source">${result.source}
+          ${getCitation(result)}
+          ${getYear(result)}
+        </p>
+        `;
+
+  let quoteBoxDiv = document.getElementById('quote-box');
+  quoteBoxDiv.innerHTML = message;
+  console.log(result.quote);
+
+  //set background and text color
+  let body = document.querySelector('body');
+  body.style.color = result.colors.color1;
+  body.style.backgroundColor = result.colors.background;
+
+  let button = document.getElementById('loadQuote');
+  button.style.backgroundColor = result.colors.color;
+  button.style.color = result.colors.background;
+
+  //listener functions for hover effect
+  button.addEventListener('mouseover',function(){
+    button.style.color = result.colors.color;
+    button.style.backgroundColor = result.colors.background;
+  });
+  button.addEventListener('mouseleave',function(){
+    button.style.backgroundColor = result.colors.color;
+    button.style.color = result.colors.background;
+  });
+
+  //start the timer again
+  timer = setInterval(printQuote, TIMEOUT_PERIOD);
+
+}
+
+//applying the DRY principle for function printQuote
+function getCitation(result) {
+  let span = "";
+  if(result.citation) {
+    span = `<span class="citation">${result.citation}</span>`;
+  }
+  return span;
+}
+
+function getYear(result) {
+  let span = "";
+  if(result.year) {
+    span = `<span class="year">${result.year}</span>`;
+  }
+  return span;
+}
+
+function getCategory(result) {
+  let p = "";
+  if(result.tag) {
+    p = `<p class="category">${result.tags}</p>`;
+  }
+  return p;
+}
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
